@@ -1,0 +1,1 @@
+import React from'react';import{jsx as _jsx}from"react/jsx-runtime";var authImagesBG=function authImagesBG(){return/*#__PURE__*/_jsx("svg",{width:"844",height:"1024",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:/*#__PURE__*/_jsx("path",{d:"M0 1024 426.306 0H845v1024H0Z",fill:"#E0FAFD"})});};export default authImagesBG;

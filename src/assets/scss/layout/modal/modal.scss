@@ -1,0 +1,90 @@
+@import '../../abstracts/variables';
+
+.adding-new-user-modal-heading {
+  border-bottom: #e6e8f0 $ev-border-px-1 solid;
+  padding: $ev-margin-20 $ev-margin-0 $ev-margin-16 $ev-margin-0;
+}
+.adding-new-user-modal-body {
+  padding: $ev-margin-32 $ev-margin-24;
+  border-bottom: 1px solid #e6e8f0;
+}
+.feedbacks-modal-body {
+  height: 100px;
+  overflow-y: auto;
+}
+.modal-body {
+  padding: $ev-margin-20 $ev-margin-20 $ev-margin-36 $ev-margin-20;
+}
+
+.modal-body-group-question {
+  height: 400px;
+  overflow: auto;
+  .modal-column {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+}
+.modal-heading {
+  border-bottom: $ev-color-border-light-gray $ev-border-px-1 solid;
+  padding: $ev-margin-20 $ev-margin-0 $ev-margin-16 $ev-margin-0;
+}
+.modal-footer {
+  padding: $ev-margin-0 $ev-margin-16 $ev-margin-0 $ev-margin-16;
+  display: flex;
+  justify-content: center;
+}
+.check-icon-container {
+  padding: $ev-margin-30 $ev-margin-52 $ev-margin-30 $ev-margin-52;
+  text-align: center;
+}
+.modal-evaluatee {
+  .right-arrow-container {
+    .arrow-left-top {
+      width: 0;
+      height: 0;
+      border-bottom: 30px solid transparent;
+      border-right: 45px solid $ev-color-dark-blue2;
+    }
+    .arrow-left-bottom {
+      width: 0;
+      height: 0;
+      border-top: 30px solid transparent;
+      border-right: 45px solid $ev-color-dark-blue2;
+    }
+    .arrow-right {
+      width: 0;
+      float: left;
+      height: 0;
+      border-top: 30px solid transparent;
+      border-bottom: 30px solid transparent;
+      border-left: 50px solid #092b54;
+    }
+    .arrow-right-body {
+      background: $ev-color-dark-blue2;
+      height: 60px;
+      padding: 0px 30px 0px 30px;
+    }
+  }
+  .text-field-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    .edit-container {
+      width: 100%;
+      background: $ev-color-gray-input;
+      min-height: 20px;
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      word-break: break-all;
+    }
+    .edit-textarea-container {
+      width: 100%;
+      background: $ev-color-gray-input;
+      min-height: 70px;
+      text-align: left;
+      word-break: break-all;
+      padding: 10px;
+    }
+  }
+}
