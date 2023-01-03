@@ -1,0 +1,33 @@
+trigger:
+  - develop
+  
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '16.14.0'
+  displayName: 'Install Node.js'
+
+- script: |
+        yarn install
+        yarn run build
+  displayName: "Yarn install and build"
+
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: 'build'
+    Contents: '**'
+    TargetFolder: '$(build.artifactstagingdirectory)'
+    CleanTargetFolder: true
+    OverWrite: true
+  displayName: 'Copy output files'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'Evaluation_Artifact'
+    publishLocation: 'Container'
+  displayName: 'Publish output files'
+  
